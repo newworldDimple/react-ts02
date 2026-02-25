@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../store/authSlice'
+import { useTranslation } from 'react-i18next'
 
 const LoginPage = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch()
+  const { t } = useTranslation()
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
@@ -16,10 +18,10 @@ const LoginPage = () => {
 
   return (
     <div style={{ maxWidth: '400px', margin: '100px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-      <h2>Login</h2>
+      <h2>{t('login.title')}</h2>
       <form onSubmit={handleLogin}>
         <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Username:</label>
+          <label style={{ display: 'block', marginBottom: '5px' }}>{t('login.username')}:</label>
           <input
             type="text"
             value={username}
@@ -28,7 +30,7 @@ const LoginPage = () => {
           />
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Password:</label>
+          <label style={{ display: 'block', marginBottom: '5px' }}>{t('login.password')}:</label>
           <input
             type="password"
             value={password}
@@ -37,7 +39,7 @@ const LoginPage = () => {
           />
         </div>
         <button type="submit" style={{ width: '100%', padding: '10px', cursor: 'pointer' }}>
-          Login
+          {t('login.button')}
         </button>
       </form>
     </div>

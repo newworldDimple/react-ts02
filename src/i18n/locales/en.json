@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "button": "Login"
+    },
+    "home": {
+      "welcome": "Welcome",
+      "loggedIn": "You are now logged in.",
+      "logout": "Logout"
+    }
+  }
+}

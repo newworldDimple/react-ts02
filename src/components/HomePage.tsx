@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../store'
 import { logout } from '../store/authSlice'
+import { useTranslation } from 'react-i18next'
 
 const HomePage = () => {
-  //userState是redux里面的，获取到了RootState就可以每一个页面取到RootState的值
   const { user } = useSelector((state: RootState) => state.auth)
   const dispatch = useDispatch()
-  //
-// useDispatch是dispatch的hook 可以拿到store中的dispatch，
+  const { t } = useTranslation()
+
   const handleLogout = () => {
     dispatch(logout())
     console.log('logout',logout())
@@ -15,13 +15,13 @@ const HomePage = () => {
 
   return (
     <div style={{ maxWidth: '600px', margin: '50px auto', padding: '20px', textAlign: 'center' }}>
-      <h1>Welcome, {user?.username}!</h1>
-      <p>You are now logged in.</p>
+      <h1>{t('home.welcome')}, {user?.username}!</h1>
+      <p>{t('home.loggedIn')}</p>
       <button 
         onClick={handleLogout}
         style={{ padding: '10px 20px', cursor: 'pointer' }}
       >
-        Logout
+        {t('home.logout')}
       </button>
     </div>
   )

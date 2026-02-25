@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "login": {
+      "title": "登录1111",
+      "username": "用户名",
+      "password": "密码",
+      "button": "登录"
+    },
+    "home": {
+      "welcome": "欢迎",
+      "loggedIn": "您已登录。",
+      "logout": "退出"
+    }
+  }
+}
