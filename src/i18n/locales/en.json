@@ -4,7 +4,8 @@
       "title": "Login",
       "username": "Username",
       "password": "Password",
-      "button": "Login"
+      "button": "Login",
+      "error": "Invalid username or password"
     },
     "home": {
       "welcome": "Welcome",

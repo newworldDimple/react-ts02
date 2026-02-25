@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { login } from '../store/authSlice'
 import { useTranslation } from 'react-i18next'
 import i18n from '../i18n'
+import { validateLogin } from '../mock/users'
 
 const LoginPage = () => {
   const [username, setUsername] = useState('')
@@ -12,8 +13,10 @@ const LoginPage = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
-    if (username && password) {
+    if (username && password && validateLogin(username, password)) {
       dispatch(login({ username }))
+    } else {
+      alert(t('login.error'))
     }
   }
 

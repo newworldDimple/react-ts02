@@ -1,10 +1,11 @@
 {
   "translation": {
     "login": {
-      "title": "登录1111",
+      "title": "登录",
       "username": "用户名",
       "password": "密码",
-      "button": "登录"
+      "button": "登录",
+      "error": "用户名或密码错误"
     },
     "home": {
       "welcome": "欢迎",
