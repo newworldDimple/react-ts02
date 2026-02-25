@@ -1,13 +1,24 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import authReducer from './authSlice'
-// 用configureStore生成reducer
-export const store = configureStore({
-  reducer: {
-    auth: authReducer,
-  },
-  //reducer是纯函数，改变store中的state
-  //store和props没有关系
+
+const rootReducer = combineReducers({
+  auth: authReducer,
 })
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = configureStore({
+  reducer: persistedReducer,
+})
+
+export const persistor = persistStore(store)
 // type定义数据类型
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
