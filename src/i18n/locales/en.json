@@ -1,5 +1,6 @@
 {
   "translation": {
+    "title": "Taobao Admin System",
     "login": {
       "title": "Login",
       "username": "Username",
@@ -11,6 +12,72 @@
       "welcome": "Welcome",
       "loggedIn": "You are now logged in.",
       "logout": "Logout"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "products": "Products",
+      "orders": "Orders",
+      "users": "Users"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "totalSales": "Total Sales",
+      "totalOrders": "Total Orders",
+      "totalUsers": "Total Users",
+      "totalProducts": "Total Products",
+      "recentOrders": "Recent Orders",
+      "orderId": "Order ID",
+      "product": "Product",
+      "amount": "Amount",
+      "status": "Status",
+      "completed": "Completed",
+      "pending": "Pending"
+    },
+    "products": {
+      "title": "Product Management",
+      "id": "ID",
+      "name": "Name",
+      "price": "Price",
+      "stock": "Stock",
+      "status": "Status",
+      "action": "Action",
+      "addProduct": "Add Product",
+      "edit": "Edit",
+      "delete": "Delete",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "orders": {
+      "title": "Order Management",
+      "orderId": "Order ID",
+      "customer": "Customer",
+      "product": "Product",
+      "amount": "Amount",
+      "status": "Status",
+      "date": "Date",
+      "action": "Action",
+      "search": "Search",
+      "searchPlaceholder": "Search orders...",
+      "view": "View",
+      "completed": "Completed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    },
+    "users": {
+      "title": "User Management",
+      "id": "ID",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "action": "Action",
+      "addUserUser": "Add User",
+      "edit": "Edit",
+      "delete": "Delete",
+      "admin": "Admin",
+      "user": "User",
+      "active": "Active",
+      "inactive": "Inactive"
     }
   }
 }
